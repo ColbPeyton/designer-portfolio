@@ -1,4 +1,6 @@
 import React from 'react';
+import beeIcon from '../assets/branding/Bee Icon.png';
+import logo from '../assets/branding/Pixel Bee Logo.png';
 
 interface HeaderProps{
     width: number;
@@ -6,10 +8,17 @@ interface HeaderProps{
 
 export const Header = (props: HeaderProps):JSX.Element => {
 
+    // TODO: add mobile button to scroll to top of page. 
+
     const mobileHeader = ():JSX.Element => {
         return (
             <div className='header-mobile'>
-                <p>Logo</p>
+                <button className='bee-icon-container'>
+                    <img src={beeIcon} alt='bee' />
+                </button>
+                <div className='logo'>
+                    <img src={logo} alt='Pixel Bee Banner' />
+                </div>
             </div>
         )
     }
@@ -18,7 +27,7 @@ export const Header = (props: HeaderProps):JSX.Element => {
         return (
             <div className= 'header-desktop'>
                 <div className='logo'>
-                    <p>Logo</p>
+                    <img src={logo} alt='Pixel Bee Banner' />
                 </div>
                 <nav className='links'>
                     <a href='#container-about'>about</a>
