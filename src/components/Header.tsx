@@ -1,6 +1,7 @@
 import React from 'react';
 import beeIcon from '../assets/branding/Bee Icon.png';
 import logo from '../assets/branding/Pixel Bee Logo.png';
+import '../styles/Header.scss';
 
 interface HeaderProps{
     width: number;
@@ -13,10 +14,8 @@ export const Header = (props: HeaderProps):JSX.Element => {
     const mobileHeader = ():JSX.Element => {
         return (
             <div className='header-mobile'>
-                <button className='bee-icon-container'>
-                    <img src={beeIcon} alt='bee' />
-                </button>
-                <div className='logo'>
+                <img src={beeIcon} alt='bee' className='bee-icon'/>
+                <div className='logo-container'>
                     <img src={logo} alt='Pixel Bee Banner' />
                 </div>
             </div>
@@ -26,7 +25,7 @@ export const Header = (props: HeaderProps):JSX.Element => {
     const desktopHeader = ():JSX.Element => {
         return (
             <div className= 'header-desktop'>
-                <div className='logo'>
+                <div className='logo-container'>
                     <img src={logo} alt='Pixel Bee Banner' />
                 </div>
                 <nav className='links'>
