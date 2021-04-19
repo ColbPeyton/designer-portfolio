@@ -1,6 +1,7 @@
 import React from 'react';
 import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 import logo from '../assets/branding/Pixel Bee Logo.png';
+import '../styles/About.scss';
 
 interface AboutProps{
     width: number;
@@ -16,7 +17,8 @@ export const About = (props:AboutProps):JSX.Element => {
                         <img src={logo} alt='projects'/>
                     </div>
                     <div className='title-container'>
-                        <h1>hi there</h1>
+                        <h1>hi</h1> 
+                        <h1>there</h1>
                     </div>
                 </div>
                 <div className='bot'>
@@ -56,7 +58,7 @@ export const About = (props:AboutProps):JSX.Element => {
     }
 
     return (
-        <div  className='about-container'>
+        <div  className='container-about'>
             {renderBasedOnScreen(props.width, mobileAbout, desktopAbout)}
         </div>
     )
