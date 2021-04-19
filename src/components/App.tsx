@@ -21,7 +21,7 @@ export const App = ():JSX.Element => {
     return(
         <div>
             <Header width={width}/>
-            <About />
+            <About width={width} />
             <Banner title={'work'} />
             <WorkContainer screenSize={'mobile'}/>
             <Banner />
