@@ -2,6 +2,7 @@ import React from 'react';
 import beeIcon from '../assets/branding/Bee Icon.png';
 import logo from '../assets/branding/Pixel Bee Logo.png';
 import '../styles/Header.scss';
+import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 
 interface HeaderProps{
     width: number;
@@ -36,17 +37,10 @@ export const Header = (props: HeaderProps):JSX.Element => {
             </div>
         )
     }
-
-    const renderHeaderBasedOnScreenSize = ():JSX.Element => {
-        return props.width <= 480 
-            ? mobileHeader() 
-            : desktopHeader();
-    }
-
-
+    
     return(
         <div className='container-header'>
-            {renderHeaderBasedOnScreenSize()}
+            {renderBasedOnScreen(props.width, mobileHeader, desktopHeader)}
         </div>
     )
 }
