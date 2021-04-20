@@ -3,6 +3,7 @@ import {Header} from './Header';
 import {About} from './About';
 import {Banner} from './Banner';
 import {WorkContainer} from './WorkContainer';
+import {Footer} from './Footer';
 
 interface AppState{
   width: number;
@@ -28,6 +29,7 @@ export const App = ():JSX.Element => {
             <About width={width} />
             <Banner title={'work'} color={'#F15F57'}/>
             <WorkContainer screenSize={'mobile'}/>
+            <Footer width={width}/>
             <Banner color={'#F7C05D'}/>
         </div>
     )
