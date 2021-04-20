@@ -1,11 +1,15 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, Props} from 'react';
 import {Header} from './Header';
 import {About} from './About';
 import {Banner} from './Banner';
 import {WorkContainer} from './WorkContainer';
 
+interface AppState{
+  width: number;
+}
+
 export const App = ():JSX.Element => {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState<AppState['width']>(window.innerWidth);
 
     // Header will change based on size of screen, detect change in width
     useEffect(()=>{
