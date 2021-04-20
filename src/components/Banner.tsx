@@ -3,7 +3,9 @@ import '../styles/Banner.scss';
 
 interface BannerProps{
     title?: string;
+    color?: string;
 }
+
 
 export const Banner = React.memo((props: BannerProps): JSX.Element => {
 
@@ -15,7 +17,7 @@ export const Banner = React.memo((props: BannerProps): JSX.Element => {
 
     return(
         <div className='container-banner'>
-            <div className='banner-text'>
+            <div className='banner-text' style={{backgroundColor: props.color}}>
                 {renderText()}
             </div>
         </div>

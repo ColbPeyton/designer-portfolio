@@ -22,9 +22,9 @@ export const App = ():JSX.Element => {
         <div>
             <Header width={width}/>
             <About width={width} />
-            <Banner title={'work'} />
+            <Banner title={'work'} color={'#F15F57'}/>
             <WorkContainer screenSize={'mobile'}/>
-            <Banner />
+            <Banner color={'#F7C05D'}/>
         </div>
     )
 }
