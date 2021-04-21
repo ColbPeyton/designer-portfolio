@@ -1,10 +1,17 @@
 import React from 'react';
-import '../styles/Footer.scss';
 import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 import logo from '../assets/branding/Pixel Bee Logo.png'
+
+import '../styles/Footer.scss';
+
 interface FooterProps{
     width:number;
 }
+
+const urls = {
+    insta : 'https://www.instagram.com/pixelbeecreative/',
+    etsy: 'https://www.etsy.com/shop/PixelBeeCreativeShop'
+};
 
 export const Footer = (props:FooterProps):JSX.Element => {
 
@@ -15,8 +22,8 @@ export const Footer = (props:FooterProps):JSX.Element => {
                     <img src={logo} alt='contact message' />
                 </div>
                 <div className='mid'>
-                        <a href=''>etsy</a>
-                        <a href=''>insta</a>
+                        <a href={urls.etsy} className='link-btn'>etsy</a>
+                        <a href={urls.insta} className='link-btn'>insta</a>
                 </div>
                 <div className='bot'>
                     <div className='letter-container'>
@@ -36,8 +43,8 @@ export const Footer = (props:FooterProps):JSX.Element => {
             <div className='desktop-footer'>
                 <div className='top'>
                     <div className='left'>
-                        <a href=''>etsy</a>
-                        <a href=''>insta</a>
+                        <a href={urls.etsy} className='link-btn'>etsy</a>
+                        <a href={urls.insta} className='link-btn'>insta</a>
                     </div>
                     <div className='right'>
                         <img src={logo} alt='contact message' />
