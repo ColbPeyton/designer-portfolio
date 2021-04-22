@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import {WidthContext} from '../contexts/WidthContext';
 import beeIcon from '../assets/branding/Bee Icon.png';
 import logo from '../assets/branding/Pixel Bee Logo.png';
 import '../styles/Header.scss';
@@ -8,9 +9,11 @@ interface HeaderProps{
     width: number;
 }
 
-export const Header = (props: HeaderProps):JSX.Element => {
+export const Header = ():JSX.Element => {
 
     // TODO: add mobile button to scroll to top of page. 
+
+    const width = useContext<HeaderProps['width']>(WidthContext);
 
     const mobileHeader = ():JSX.Element => {
         return (
@@ -40,7 +43,7 @@ export const Header = (props: HeaderProps):JSX.Element => {
     
     return(
         <div className='container-header'>
-            {renderBasedOnScreen(props.width, mobileHeader, desktopHeader)}
+            {renderBasedOnScreen(width, mobileHeader, desktopHeader)}
         </div>
     )
 }

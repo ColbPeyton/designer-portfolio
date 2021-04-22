@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import {WidthContext} from '../contexts/WidthContext';
 import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 import logo from '../assets/branding/Pixel Bee Logo.png'
 
@@ -13,7 +14,9 @@ const urls = {
     etsy: 'https://www.etsy.com/shop/PixelBeeCreativeShop'
 };
 
-export const Footer = (props:FooterProps):JSX.Element => {
+export const Footer = ():JSX.Element => {
+
+    const width = useContext<FooterProps['width']>(WidthContext);
 
     const mobileFooter = ():JSX.Element => {
         return(
@@ -66,7 +69,7 @@ export const Footer = (props:FooterProps):JSX.Element => {
 
     return(
         <div className='container-footer'>
-            {renderBasedOnScreen(props.width, mobileFooter, desktopFooter)}
+            {renderBasedOnScreen(width, mobileFooter, desktopFooter)}
         </div>
     )
 }

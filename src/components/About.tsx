@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import {WidthContext} from '../contexts/WidthContext';
 import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 import logo from '../assets/branding/Pixel Bee Logo.png';
 import '../styles/About.scss';
@@ -7,7 +8,9 @@ interface AboutProps{
     width: number;
 }
 
-export const About = (props:AboutProps):JSX.Element => {
+export const About = ():JSX.Element => {
+
+    const width = useContext<AboutProps['width']>(WidthContext);
 
     const mobileAbout = ():JSX.Element =>{
         return(
@@ -59,7 +62,7 @@ export const About = (props:AboutProps):JSX.Element => {
 
     return (
         <div  className='container-about'>
-            {renderBasedOnScreen(props.width, mobileAbout, desktopAbout)}
+            {renderBasedOnScreen(width, mobileAbout, desktopAbout)}
         </div>
     )
 }
