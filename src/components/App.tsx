@@ -14,7 +14,7 @@ export const App = ():JSX.Element => {
             <Header />
             <About  />
             <Banner title={'work'} color={'#F15F57'}/>
-            <WorkContainer screenSize={'mobile'}/>
+            <WorkContainer />
             <Footer />
             <Banner color={'#F7C05D'}/>
         </WidthProvider>
