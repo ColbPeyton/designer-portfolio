@@ -20,21 +20,25 @@ export const About = ():JSX.Element => {
                         <img src={logo} alt='projects'/>
                     </div>
                     <div className='title-container'>
-                        <h1>hi</h1> 
-                        <h1>there</h1>
+                        <h1>Hi, I'm Hanna!</h1> 
+                        <h1>Let's work together!</h1>
                     </div>
                 </div>
                 <div className='bot'>
                     <div className='desc-container'>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Sequi temporibus cumque exercitationem similique accusantium totam!
+                            My career in graphic design started in 2015. 
+                            Since then, I've worked as an in-house, agency, and freelance designer. 
+                            I love collaborating with clients to help them achieve their goals. 
+                            Whether it's building a cohesive brand identity, designing an eye-catching brochure, or creating a strategic social media campaign, I'm here to help!
                         </p>
                     </div>
                 </div>
             </div>
         )
     }
+
+    
 
     const desktopAbout = ():JSX.Element => {
         return(
