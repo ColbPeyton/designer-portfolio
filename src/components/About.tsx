@@ -54,8 +54,10 @@ export const About = ():JSX.Element => {
                     </div>
                     <div className='desc-container'>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Sequi temporibus cumque exercitationem similique accusantium totam!
+                            My career in graphic design started in 2015. 
+                            Since then, I've worked as an in-house, agency, and freelance designer. 
+                            I love collaborating with clients to help them achieve their goals. 
+                            Whether it's building a cohesive brand identity, designing an eye-catching brochure, or creating a strategic social media campaign, I'm here to help!
                         </p>
                     </div>
              </div>

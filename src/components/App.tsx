@@ -6,20 +6,22 @@ import {About} from './About';
 import {Banner} from './Banner';
 import {WorkContainer} from './WorkContainer';
 import {Footer} from './Footer';
+import '../styles/App.scss';
 
 
 export const App = ():JSX.Element => {
 
     return(
-        <WidthProvider>
-            <ThemeProvider>
+        <div className ='container-app'>
+            <WidthProvider>
                 <Header />
                 <About  />
                 <Banner title={'work'} color={'#F15F57'}/>
                 <WorkContainer />
                 <Footer />
                 <Banner color={'#F7C05D'}/>
-            </ThemeProvider>
-        </WidthProvider>
+            </WidthProvider>
+        </div>
+        
     )
 }
