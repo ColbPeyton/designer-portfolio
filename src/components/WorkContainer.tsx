@@ -1,19 +1,16 @@
-import React,{useState, useContext} from 'react';
+import React,{useContext} from 'react';
 import {WidthContext} from '../contexts/WidthContext';
 // import axios from 'axios';
 import {Work} from './Work';
+import {dataInfo, data} from '../_data/data';
+
 
 interface WorkContainerProps{
     width: number;
 }
 
-interface WorkContainerState{
-    workData: string[][];
-}
-
 export const WorkContainer = (): JSX.Element => {
 
-    const [workData, setWorkData] = useState<WorkContainerState['workData']>([]);
     const width = useContext<WorkContainerProps['width']>(WidthContext);
     
     const addClassBasedOScreenSize = ():String => {
@@ -22,10 +19,19 @@ export const WorkContainer = (): JSX.Element => {
         : 'desktop';
     }
 
+    const renderProjects = ():JSX.Element => {
+        return(
+            <div className='container-projects'>
+                {data.map((project)=>{
+                    return <Work key={project.id} project={project} />
+                })}
+            </div>
+        )
+    }
+
     return(
         <div className={`container-work-container ${addClassBasedOScreenSize()}`}>
-            Work Container
-            <Work imageUrl="url" title="title" desc={'desc'}/>
+            {renderProjects()}
         </div>
     )
     
