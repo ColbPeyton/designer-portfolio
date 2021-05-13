@@ -15,7 +15,9 @@ export const App = ():JSX.Element => {
             <WidthProvider>
                 <Header />
                 <About  />
-                <Banner title={'work'} color={'#F15F57'}/>
+                <div className='container-banner'>
+                    <Banner title={'work'} color={'#F15F57'}/>
+                </div>
                 <WorkContainer />
                 <Footer />
                 <Banner color={'#F7C05D'}/>
