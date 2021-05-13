@@ -14,13 +14,23 @@ export const Work = (props: WorkProps):JSX.Element => {
         : ''
     }
 
+    const handleClick = ():JSX.Element => {
+        return <SRLWrapper elements={props.project.elements} />
+    }
+
 
 
     return(
-        <SRLWrapper>
-            <button className={`container-work ${updateStyleOnProp()}`}>
-                <img src={props.project.thumbnail.default} alt={props.project.name} />
-            </button>
-        </SRLWrapper>
+        <div className={`container-work ${updateStyleOnProp()}`} >
+            <SRLWrapper>
+                <img src={props.project.thumbnail.default} alt={props.project.name}/>
+                <a href={props.project.thumbnail.default}>
+                    <img src={props.project.thumbnail.default} alt="" />
+                </a>
+                <a href={props.project.thumbnail.default}>
+                    <img src={props.project.thumbnail.default} alt="" />
+                </a>
+            </SRLWrapper>
+        </div>
     )
 }
