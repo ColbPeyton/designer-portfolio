@@ -1,0 +1,21 @@
+.container-work{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container-projects{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        &.mobile{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        &.desktop{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+}

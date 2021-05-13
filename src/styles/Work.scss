@@ -1,0 +1,27 @@
+.container-work{
+    div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &.square{
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+    }
+    
+}
