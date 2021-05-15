@@ -15,11 +15,10 @@ interface HeaderState{
 
 export const Header = ():JSX.Element => {
 
-    // TODO: add mobile button to scroll to top of page. 
-
     const width = useContext<HeaderProps['width']>(WidthContext);
     const [height, setHeight] = useState<HeaderState['height']>(window.pageYOffset);
 
+    // check current YOffset of page, render bee icon once threshold is met
     const updateHeight = () =>{
         setHeight(window.pageYOffset);
     }
