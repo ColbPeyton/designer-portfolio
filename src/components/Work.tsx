@@ -15,9 +15,9 @@ export const Work = (props: WorkProps):JSX.Element => {
         : ''
     }
 
-    const handleClick = ():JSX.Element => {
-        return <SRLWrapper elements={props.project.elements} />
-    }
+    // const handleClick = ():JSX.Element => {
+    //     return <SRLWrapper elements={props.project.elements} />
+    // }
 
 
 

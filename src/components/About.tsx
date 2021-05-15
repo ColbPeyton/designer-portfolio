@@ -20,11 +20,14 @@ export const About = ():JSX.Element => {
                         <img src={logo} alt='projects'/>
                     </div>
                     <div className='title-container'>
-                        <h1>Hi, I'm Hanna!</h1> 
-                        <h1>Let's work together!</h1>
+                        <h1 className='large'>Hi</h1> 
+                        <h1 className='small'>I'm Hanna!</h1>
                     </div>
                 </div>
                 <div className='bot'>
+                    <div className='tagline-container'>
+                        <h2>Let's work together!</h2>
+                    </div>
                     <div className='desc-container'>
                         <p>
                             My career in graphic design started in 2015. 
