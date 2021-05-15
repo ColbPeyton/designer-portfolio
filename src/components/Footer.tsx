@@ -33,8 +33,12 @@ export const Footer = ():JSX.Element => {
                         <img src={logo} alt='contact message' />
                     </div>
                     <div className='contact-container'>
-                        <h2>get in touch</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eius debitis ullam laborum reprehenderit corrupti.</p>
+                        <div className='top'>
+                            <h2>get in touch</h2>
+                        </div>
+                        <div className='bot'>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
                     </div>
                 </div>
             </div>
