@@ -33,7 +33,7 @@ export const Header = ():JSX.Element => {
     const renderButtonAtYOffset = ():string => {
         return height >= 150 
         ? 'active'
-        : ''
+        : 'disabled'
     }
 
 
