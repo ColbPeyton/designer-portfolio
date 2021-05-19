@@ -5,7 +5,7 @@ import logo from '../assets/branding/Pixel Bee Logo.png';
 import '../styles/Header.scss';
 import {renderBasedOnScreen} from '../_utils/renderBasedOnScreen';
 
-interface HeaderProps{
+interface ContextProps{
     width: number;
 }
 
@@ -13,9 +13,20 @@ interface HeaderState{
     height: number;
 }
 
-export const Header = ():JSX.Element => {
 
-    const width = useContext<HeaderProps['width']>(WidthContext);
+// App refs to Component divs and scroll method
+interface HeaderProps{
+    refs: {
+        aboutRef: React.RefObject<HTMLDivElement>;
+        workRef: React.RefObject<HTMLDivElement>;
+        footerRef: React.RefObject<HTMLDivElement>;
+    };
+    scrollToComponent: (ref: any) => void;
+}
+
+export const Header = (props:HeaderProps):JSX.Element => {
+
+    const width = useContext<ContextProps['width']>(WidthContext);
     const [height, setHeight] = useState<HeaderState['height']>(window.pageYOffset);
 
     // check current YOffset of page, render bee icon once threshold is met
@@ -34,6 +45,10 @@ export const Header = ():JSX.Element => {
         return height >= 150 
         ? 'active'
         : 'disabled'
+    }
+
+    const callParentScroll = (ref: React.RefObject<HTMLDivElement>):void => {
+        props.scrollToComponent(ref);
     }
 
 
@@ -57,9 +72,9 @@ export const Header = ():JSX.Element => {
                     <img src={logo} alt='Pixel Bee Banner' />
                 </div>
                 <nav className='links'>
-                    <a href='#container-about'>about</a>
-                    <a href='#container-work'>work</a>
-                    <a href='#container-contact'>contact</a>
+                    <button onClick={()=> callParentScroll(props.refs.aboutRef)}>about</button>
+                    <button onClick={()=> callParentScroll(props.refs.workRef)}>work</button>
+                    <button onClick={()=> callParentScroll(props.refs.footerRef)}>contact</button>
                 </nav>
             </div>
         )
